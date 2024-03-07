@@ -29,39 +29,39 @@ def main():
         text = """15 command line arguments are expected: \
                 \n\t(1)  ABQ inp file name including path \
                 \n\t ****** -------- ******* \
-                \n\t(2)  scalingFactor-BasePlateLength-left-coarseRegion (original = 3 units) \
-                \n\t(3)  scalingFactor-BasePlateLength-left-fineRegion (original = 2 units) \
-                \n\t(4)  scalingFactor-DepositLength (original = 10 units) \
-                \n\t(5)  scalingFactor-BasePlateLength-right-fineRegion (original = 2 units) \
-                \n\t(6)  scalingFactor-BasePlateLength-right-coarseRegion (original = 3 units) \
+                \n\t(2)  BasePlateLength-left-coarseRegion (original = 3 units) \
+                \n\t(3)  BasePlateLength-left-fineRegion (original = 2 units) \
+                \n\t(4)  DepositLength (original = 10 units) \
+                \n\t(5)  BasePlateLength-right-fineRegion (original = 2 units) \
+                \n\t(6)  BasePlateLength-right-coarseRegion (original = 3 units) \
                 \n\t ****** -------- ******* \
-                \n\t(7)  scalingFactor-BasePlateWidth-left-coarseRegion (original = 1 unit) \
-                \n\t(8)  scalingFactor-BasePlateWidth-left-fineRegion (original = 1 unit) \
-                \n\t(9)  scalingFactor-DepositWidth (original = 1 unit) \
-                \n\t(10) scalingFactor-BasePlateWidth-right-fineRegion (original = 1 unit) \
-                \n\t(11) scalingFactor-BasePlateWidth-right-coarseRegion (original = 1 unit) \
+                \n\t(7)  BasePlateWidth-left-coarseRegion (original = 1 unit) \
+                \n\t(8)  BasePlateWidth-left-fineRegion (original = 1 unit) \
+                \n\t(9)  DepositWidth (original = 1 unit) \
+                \n\t(10) BasePlateWidth-right-fineRegion (original = 1 unit) \
+                \n\t(11) BasePlateWidth-right-coarseRegion (original = 1 unit) \
                 \n\t ****** -------- ******* \
-                \n\t(12) scalingFactor-BasePlateDepth-bottom-coarseRegion (original = 1 unit) \
-                \n\t(13) scalingFactor-BasePlateDepth-top-fineRegion (original = 0.75 units) \
-                \n\t(14) scalingFactor-DepositDepth (original = 0.5 unit) \
+                \n\t(12) BasePlateDepth-bottom-coarseRegion (original = 1 unit) \
+                \n\t(13) BasePlateDepth-top-fineRegion (original = 0.75 units) \
+                \n\t(14) DepositDepth (original = 0.5 unit) \
                 \n\t ****** -------- ******* \
                 \n\t(15) Output directory path"""
         raise RuntimeError(text)
 
     nameFileInpAbaqus = sys.argv[1]
-    scalingFactorBasePlateLengthLeftCoarseRegion = float(sys.argv[2])
-    scalingFactorBasePlateLengthLeftFineRegion = float(sys.argv[3])
-    scalingFactorDepositLength = float(sys.argv[4])
-    scalingFactorBasePlateLengthRightFineRegion = float(sys.argv[5])
-    scalingFactorBasePlateLengthRightCoarseRegion = float(sys.argv[6])
-    scalingFactorBasePlateWidthLeftCoarseRegion = float(sys.argv[7])
-    scalingFactorBasePlateWidthLeftFineRegion = float(sys.argv[8])
-    scalingFactorDepositWidth = float(sys.argv[9])
-    scalingFactorBasePlateWidthRightFineRegion = float(sys.argv[10])
-    scalingFactorBasePlateWidthRightCoarseRegion = float(sys.argv[11])
-    scalingFactorBasePlateDepthBottomCoarseRegion = float(sys.argv[12])
-    scalingFactorBasePlateDepthTopFineRegion = float(sys.argv[13])
-    scalingFactorDepositDepth = float(sys.argv[14])
+    scalingFactorBasePlateLengthLeftCoarseRegion = float(sys.argv[2])/3 # Divide target dimensions with reference dimensions to obtain scaling factors
+    scalingFactorBasePlateLengthLeftFineRegion = float(sys.argv[3])/2
+    scalingFactorDepositLength = float(sys.argv[4])/10
+    scalingFactorBasePlateLengthRightFineRegion = float(sys.argv[5])/2
+    scalingFactorBasePlateLengthRightCoarseRegion = float(sys.argv[6])/3
+    scalingFactorBasePlateWidthLeftCoarseRegion = float(sys.argv[7])/1
+    scalingFactorBasePlateWidthLeftFineRegion = float(sys.argv[8])/1
+    scalingFactorDepositWidth = float(sys.argv[9])/1
+    scalingFactorBasePlateWidthRightFineRegion = float(sys.argv[10])/1
+    scalingFactorBasePlateWidthRightCoarseRegion = float(sys.argv[11])/1
+    scalingFactorBasePlateDepthBottomCoarseRegion = float(sys.argv[12])/1
+    scalingFactorBasePlateDepthTopFineRegion = float(sys.argv[13])/0.75
+    scalingFactorDepositDepth = float(sys.argv[14])/0.5
     outputPath = sys.argv[15]
         
     pathDir = outputPath + "/"    
