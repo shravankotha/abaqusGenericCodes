@@ -41,8 +41,8 @@ def main():
                 \n\t(10) BasePlateWidth-right-fineRegion (original = 1 unit) \
                 \n\t(11) BasePlateWidth-right-coarseRegion (original = 1 unit) \
                 \n\t ****** -------- ******* \
-                \n\t(12) BasePlateDepth-bottom-coarseRegion (original = 1 unit) \
-                \n\t(13) BasePlateDepth-top-fineRegion (original = 0.75 units) \
+                \n\t(12) BasePlateDepth-bottom-coarseRegion (original = 0.995 unit) \
+                \n\t(13) BasePlateDepth-top-fineRegion (original = 0.755 units) \
                 \n\t(14) DepositDepth (original = 0.5 unit) \
                 \n\t ****** -------- ******* \
                 \n\t(15) Output directory path"""
@@ -59,8 +59,8 @@ def main():
     scalingFactorDepositWidth = float(sys.argv[9])/1
     scalingFactorBasePlateWidthRightFineRegion = float(sys.argv[10])/1
     scalingFactorBasePlateWidthRightCoarseRegion = float(sys.argv[11])/1
-    scalingFactorBasePlateDepthBottomCoarseRegion = float(sys.argv[12])/1
-    scalingFactorBasePlateDepthTopFineRegion = float(sys.argv[13])/0.75
+    scalingFactorBasePlateDepthBottomCoarseRegion = float(sys.argv[12])/0.995
+    scalingFactorBasePlateDepthTopFineRegion = float(sys.argv[13])/0.755
     scalingFactorDepositDepth = float(sys.argv[14])/0.5
     outputPath = sys.argv[15]
         
